@@ -23,6 +23,11 @@ namespace Tyuiu.FisherMA.Sprint5.Task7.V15.Lib
             return result;
         }
 
+        public string LoadDataAndSave(string path)
+        {
+            throw new NotImplementedException();
+        }
+
         public double LoadFromDataFile(string path)
         {
             throw new NotImplementedException();
