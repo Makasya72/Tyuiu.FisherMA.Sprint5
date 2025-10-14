@@ -10,7 +10,6 @@ namespace Tyuiu.FisherMA.Sprint5.Task5.V6.Lib
     {
         public double CalculateAverage(string path)
         {
-            
             string[] lines = File.ReadAllLines(path);
 
             double[] numbers = lines
@@ -21,7 +20,7 @@ namespace Tyuiu.FisherMA.Sprint5.Task5.V6.Lib
             if (numbers.Length == 0)
                 throw new InvalidOperationException("Файл не содержит чисел.");
 
-            double average = numbers.Average();
+            double average = numbers.Select(n => Math.Abs(n)).Average();
 
             return Math.Round(average, 3);
         }
