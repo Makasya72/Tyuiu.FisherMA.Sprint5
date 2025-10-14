@@ -10,19 +10,17 @@ namespace Tyuiu.FisherMA.Sprint5.Task5.V6.Lib
     {
         public double CalculateAverage(string path)
         {
-           
+            
             string[] lines = File.ReadAllLines(path);
 
-          
             double[] numbers = lines
-                .Where(l => !string.IsNullOrWhiteSpace(l))
-                .Select(l => double.Parse(l, CultureInfo.InvariantCulture))
+                .SelectMany(l => l.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries))
+                .Select(s => double.Parse(s, CultureInfo.InvariantCulture))
                 .ToArray();
 
             if (numbers.Length == 0)
                 throw new InvalidOperationException("Файл не содержит чисел.");
 
-            
             double average = numbers.Average();
 
             return Math.Round(average, 3);
