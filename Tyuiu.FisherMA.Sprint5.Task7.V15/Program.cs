@@ -6,17 +6,17 @@ namespace Tyuiu.FisherMA.Sprint5.Task7.V15
         static void Main(string[] args)
         {
             DataService ds = new DataService();
-            Console.Title = "Спринт #5 | Выполнил: Чигуров М. В. | ПКТб-24-1";
+            Console.Title = "Спринт #5 | Выполнил: Фишер М. A. | ИИПб-25-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
             Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                 *");
             Console.WriteLine("* Задание #7                                                              *");
             Console.WriteLine("* Вариант #15                                                             *");
-            Console.WriteLine("* Выполнил: Чигуров Максим Владиславович | ПКТб-24-1                      *");
+            Console.WriteLine("* Выполнил: Фишер Максим Алексеевич | ИИПб-25-1                           *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, которая удалит все слова длиной 2 символа          *");
-            Console.WriteLine("* Полученный результат сохранит в файл OutPutDataFileTask7V15.txt.       *");
+            Console.WriteLine("* Написать программу, которая удалит все слова длиной 2 символа           *");
+            Console.WriteLine("* Полученный результат сохранит в файл OutPutDataFileTask7V15.txt.        *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
