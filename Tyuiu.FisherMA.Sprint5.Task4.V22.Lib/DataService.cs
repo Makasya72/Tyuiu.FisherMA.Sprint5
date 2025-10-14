@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Globalization;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.FisherMA.Sprint5.Task4.V22.Lib
@@ -12,7 +13,8 @@ namespace Tyuiu.FisherMA.Sprint5.Task4.V22.Lib
             double x;
             using (StreamReader sr = new StreamReader(path))
             {
-                x = Convert.ToDouble(sr.ReadLine());
+                string line = sr.ReadLine();
+                x = double.Parse(line, CultureInfo.InvariantCulture);
             }
 
             double y = Math.Pow(x, 3) * Math.Sin(x) - 4 * x;
