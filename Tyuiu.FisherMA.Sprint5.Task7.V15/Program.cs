@@ -27,6 +27,7 @@ namespace Tyuiu.FisherMA.Sprint5.Task7.V15
 
             string pathInput = @"C:\DataSprint5\InPutDataFileTask7V15.txt";
             string pathOutput = @"C:\DataSprint5\OutPutDataFileTask7V15.txt";
+             
 
             try
             {
