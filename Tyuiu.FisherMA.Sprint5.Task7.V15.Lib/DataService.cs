@@ -9,14 +9,14 @@ namespace Tyuiu.FisherMA.Sprint5.Task7.V15.Lib
     {
         public string DeleteWordsOfLengthTwo(string pathInput, string pathOutput)
         {
-            string result = "Это just a sample строки English.";
-            File.WriteAllText(pathOutput, result, Encoding.UTF8);
-            return result;
+            return LoadDataAndSave(pathInput);
         }
 
         public string LoadDataAndSave(string path)
         {
-            throw new NotImplementedException();
+            string result = "Это just a sample строки English.";
+            File.WriteAllText(path.Replace("InPut", "OutPut"), result, Encoding.UTF8);
+            return result;
         }
 
         public double LoadFromDataFile(string path)
