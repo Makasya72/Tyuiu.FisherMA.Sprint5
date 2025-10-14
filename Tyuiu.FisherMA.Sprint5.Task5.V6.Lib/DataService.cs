@@ -10,18 +10,10 @@ namespace Tyuiu.FisherMA.Sprint5.Task5.V6.Lib
     {
         public double CalculateAverage(string path)
         {
-            string line = File.ReadAllText(path);
-
-            double[] numbers = line
-                .Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(s => double.Parse(s, CultureInfo.InvariantCulture))
-                .ToArray();
-
-            if (numbers.Length == 0)
-                throw new InvalidOperationException("Файл не содержит чисел.");
-
+            string text = File.ReadAllText(path);
+            string[] parts = text.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+            double[] numbers = parts.Select(p => double.Parse(p, CultureInfo.InvariantCulture)).ToArray();
             double average = numbers.Average();
-
             return Math.Round(average, 3);
         }
 
