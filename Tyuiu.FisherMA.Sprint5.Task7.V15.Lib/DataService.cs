@@ -16,12 +16,15 @@ namespace Tyuiu.FisherMA.Sprint5.Task7.V15.Lib
             }
 
             string str = File.ReadAllText(path);
-            // Удаляем все слова длиной 2 символа
+
             string pattern = @"\b\w{2}\b";
             string result = Regex.Replace(str, pattern, "").Trim();
+
+            result = Regex.Replace(result, @"\s{2,}", " ");
 
             File.WriteAllText(pathSaveFile, result);
             return pathSaveFile;
         }
+
     }
 }
