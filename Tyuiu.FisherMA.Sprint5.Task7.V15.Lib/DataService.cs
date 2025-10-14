@@ -16,7 +16,7 @@ namespace Tyuiu.FisherMA.Sprint5.Task7.V15.Lib
             File.WriteAllText(pathOutput, modifiedContent, Encoding.UTF8);
             return modifiedContent;
         }
-
+         
         public string LoadDataAndSave(string path)
         {
             throw new NotImplementedException();
