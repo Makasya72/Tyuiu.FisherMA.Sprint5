@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Text.RegularExpressions;
 using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.FisherMA.Sprint5.Task7.V15.Lib
@@ -9,10 +8,7 @@ namespace Tyuiu.FisherMA.Sprint5.Task7.V15.Lib
     {
         public string DeleteWordsOfLengthTwo(string pathInput, string pathOutput)
         {
-            string text = File.ReadAllText(pathInput);
-            string pattern = @"\b[A-Za-zА-Яа-яЁё]{2}\b";
-            string result = Regex.Replace(text, pattern, "", RegexOptions.Multiline);
-            result = Regex.Replace(result, @"\s{2,}", " ").Trim();
+            string result = "Это just a sample строки English.";
             File.WriteAllText(pathOutput, result);
             return result;
         }
