@@ -10,12 +10,11 @@ namespace Tyuiu.FisherMA.Sprint5.Task7.V15.Lib
     {
         public string DeleteWordsOfLengthTwo(string pathInput, string pathOutput)
         {
-            string text = File.ReadAllText(pathInput, Encoding.UTF8);
-            string pattern = @"\b[А-Яа-яA-Za-z]{2}\b";
-            string result = Regex.Replace(text, pattern, "", RegexOptions.Multiline);
-            result = Regex.Replace(result, @"\s{2,}", " ").Trim();
-            File.WriteAllText(pathOutput, result, Encoding.UTF8);
-            return result;
+            string fileContent = File.ReadAllText(pathInput, Encoding.UTF8);
+            string modifiedContent = Regex.Replace(fileContent, @"\b\w{2}\b", "");
+            modifiedContent = Regex.Replace(modifiedContent, @"\s+", " ").Trim();
+            File.WriteAllText(pathOutput, modifiedContent, Encoding.UTF8);
+            return modifiedContent;
         }
 
         public string LoadDataAndSave(string path)
